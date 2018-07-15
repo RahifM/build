@@ -2717,7 +2717,7 @@ name := $(TARGET_PRODUCT)
 ifeq ($(TARGET_BUILD_TYPE),debug)
   name := $(name)_debug
 endif
-name := aosp-caf-o-mr1-$(shell date +%Y%m%d)-$(TARGET_DEVICE)
+name := aosp-caf-8.1.0-$(TARGET_DEVICE)-$(shell date +%Y%m%d-%H%M)
 
 INTERNAL_OTA_PACKAGE_TARGET := $(PRODUCT_OUT)/$(name).zip
 
