@@ -178,6 +178,7 @@ $(call add_json_list, TargetFSConfigGen,                 $(TARGET_FS_CONFIG_GEN)
 $(call add_json_bool, BoardUsesQTIHardware,              $(filter true,$(BOARD_USES_QTI_HARDWARE)))
 
 $(call add_json_bool, Should_wait_for_qsee, $(filter true,$(TARGET_KEYMASTER_WAIT_FOR_QSEE)))
+$(call add_json_str_omitempty, Additional_gralloc_10_usage_bits, $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS))
 
 $(call add_json_map, VendorVars)
 $(foreach namespace,$(SOONG_CONFIG_NAMESPACES),\
