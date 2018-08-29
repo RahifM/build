@@ -149,6 +149,7 @@ $(call add_json_list, PgoAdditionalProfileDirs,          $(PGO_ADDITIONAL_PROFIL
 $(call add_json_bool, Healthd_enable_op_fastchg,         $(filter true,$(HEALTHD_ENABLE_OP_FASTCHG_CHECK)))
 $(call add_json_bool, Target_init_vendor_lib,            $(if $(TARGET_INIT_VENDOR_LIB), true))
 $(call add_json_bool, Target_legacy_mutex_handle,        $(filter true,$(TARGET_NEEDS_LEGACY_MUTEX_HANDLE)))
+$(call add_json_str_omitempty, Target_process_sdk_version_override, $(TARGET_PROCESS_SDK_VERSION_OVERRIDE))
 $(call add_json_str,  Target_shim_libs,                  $(subst $(space),:,$(TARGET_LD_SHIM_LIBS)))
 
 _contents := $(_contents)    "VendorVars": {$(newline)
